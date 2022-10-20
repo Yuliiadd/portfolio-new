@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Yuliia Dyka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <a href="#contacts" class="name">YULIIA_DYKA</a>
+            </div>
+            <div class="header-right">
+                <label class="switch">
+                    <input type="checkbox" onchange="handleChecked(this.checked)">
+                    <span class="slider"></span>
+                    <span class="theme-name"></span>
+                </label>
+                <button class="burger">
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                </button> 
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="frame first-screen">
+               <h1 class="title">HELLO, I`M</h1>
+               <div class="animation-wrapper">
+                    <div class="first-name primary">SMART<br>CREATIVE<br>JUNIOR<br>FRONTEND<br>DEVELOPER<br>YULIIA</div>
+               </div>
+               <div class="buttons">
+                    <a href="#contacts" class="button">CONTACT ME</a>
+                    <a href="https://drive.google.com/file/d/13Al_ux4PKbYdK9cJNbYDyRWEm1b1--8Y/view?usp=sharing" target="_blank" class="button">DOWNLOAD CV</a>
+               </div>
+               <div class="social-media">
+                    <a href="https://github.com/Yuliiadd" target="_blank" class="link">GITHUB ></a>
+                    <a href="https://www.linkedin.com/in/yullia-dyka-024842151/" target="_blank" class="link">LINKEDIN ></a>
+                    <a href="https://t.me/yuliiaadd" target="_blank" class="link">TELEGRAM ></a>
+                </div>
+                <div class="scroll"></div>
+                
+            </div>
+        </section>
+
+        <section class="section desktop">
+            <div class="frame desk-2">
+                <div class="title-area">
+                    <h2 class="title">ABOUT</h2>
+                </div>
+                <div class="description">
+                    <p class="description-text">Trainee frontend developer looking for my first real career challenge. Passionate about software/web design and development. Responsible and diligent, not afraid of handling any tasks. Independently learnt HTML, CSS, JS just in three months. Now actively studying React.</p>
+                    <br><p class="description-text">Currently located in Kyiv. </p>
+                </div>
+                <a href="#contacts" class="button">Let`s get in touch!</a>
+            </div>
+        </section>
+
+        <section class="section desktop">
+            <div class="frame desk-3">
+                <h2 class="title">SKILLS</h2>
+                <div class="skills">
+                    <div class="skill">
+                        <span>HTML/CSS</span>
+                        <div class="full">
+                            <div class="result" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>JAVASCRIPT</span>
+                        <div class="full">
+                            <div class="result" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>GIT</span>
+                        <div class="full">
+                            <div class="result" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>FIGMA</span>
+                        <div class="full">
+                            <div class="result" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills in-progress">
+                    <div class="skill">
+                        <span>REACT</span>
+                        <div class="full">
+                            <div class="result" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>BOOTSTRAP</span>
+                        <div class="full">
+                            <div class="result" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>SASS/SCSS</span>
+                        <div class="full">
+                            <div class="result" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section desktop">
+            <div class="frame desk-4">
+                <h2 class="title">MY PET-PROJECTS</h2>
+                <div class="projects">
+                    <div class="project">
+                        <img src="img/card-project1.png" alt="" >
+                        <div class="project-hover" id="1">
+                            <a href="https://yuliiadd.github.io/myWish/" class="button-project">LANDING</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="img/card-project3.png" alt="">
+                        <div class="project-hover" id="2">
+                            <a href="https://yuliiadd.github.io/friends-app/" class="button-project">FRIENDS APP</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="img/card-project2.png" alt="" >
+                        <div class="project-hover" id="3">
+                            <a href="https://yuliiadd.github.io/memory-pair-game/" class="button-project">MEMORY GAME</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="img/card-project4.png" alt="" >
+                        <div class="project-hover" id="4">
+                            <a href="#" class="button-project">THIS PORTFOLIO</a>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p class="description-text" id="projectDesc">A little descripttion will be showed below. Click the projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section desktop">
+            <div class="frame desk-5">
+                <h2 class="title">EXPERIENCE</h2>
+                <div class="current-company">
+                    <img src="img/UM.png" alt="" class="company">
+
+                </div>
+
+                <div class="description">
+                    <h3 class="subtitle-1">UM Ukraine - advertising agency</h3>
+                    <h4 class="subtitle-2">Senior TV buying manager</h4>
+                    <br><p class="description-text">
+                    <span>Launching and monitoring placement of advertising campaigns</span>
+                    <span>Work with large volumes of data</span>
+                    <span> Preparation of presentations to clients</span>
+                    <span> Training of junior specialists</span></p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="section desktop">
+            <div class="frame desk-6">
+                <div class="side">
+                    <h2 class="title">EDUCATION</h2>
+                </div>
+                <div class="side">
+                    <div class="description">
+                        <h3 class="subtitle-1">National Aviation University</h3>
+                        <h4 class="subtitle-2">Master`s degree, 2018</h4>
+                        <br><p class="description-text">Faculty enviromental safety, enginering and technology</p>
+                        <br><br><h3 class="subtitle-1">Langueges</h3>
+                        <br><h4 class="subtitle-2">Ukrainian</h4>
+                        <p class="description-text">Native</p>
+                        <br><h4 class="subtitle-2">English</h4>
+                        <p class="description-text">Pre-intermediate</p>
+                    </div>
+                </div>      
+            </div>
+        </section>
+        <section class="section desktop">
+            <div class="frame desk-7" id="contacts">
+                <h2 class="title">Contacts</h2>
+                <div class="contacts">
+                <p class="contacts-info">I`ll be glad to help you to develop your business by creating great-working website.  
+                    Please send me a message via email and let`s make something incredible together</p> 
+                    <div class="buttons">
+                        <a href="mailto:yuliiadd@gmail.com" target="_blank" class="button">send email</a> 
+                        <a href="" class="copy">
+                            <svg class="svg-icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M862.315789 754.526316 862.315789 808.421053 1024 808.421053 1024 0 215.578947 0 215.578947 161.684211 269.473684 161.684211 269.473684 53.894737 970.105263 53.894737 970.105263 754.526316Z"  /><path d="M0 224.525474l0 790.528C0 1020.011789 4.958316 1024 11.102316 1024l786.162526 0C803.462737 1024 808.421053 1020.011789 808.421053 1015.053474L808.421053 224.525474C808.421053 219.567158 803.462737 215.578947 797.318737 215.578947L11.102316 215.578947C4.958316 215.578947 0 219.567158 0 224.525474zM53.894737 269.473684l700.631579 0 0 700.631579L53.894737 970.105263 53.894737 269.473684z"  /></svg>
+                        </a>  
+                    </div>
+                </div>
+                <div class="social-media">
+                    <a href="https://github.com/Yuliiadd" target="_blank" class="link">GITHUB ></a>
+                    <a href="https://www.linkedin.com/in/yullia-dyka-024842151/" target="_blank" class="link">LINKEDIN ></a>
+                    <a href="https://t.me/yuliiaadd" target="_blank" class="link">TELEGRAM ></a>
+                </div>
+                <div class="geomerty">
+                    <img src="img/geometry.png" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
