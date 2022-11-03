@@ -3,7 +3,7 @@
 const dataBase = [
     {
         id: 0,
-        text: "A little descripttion will be showed below. Click the projects."
+        text: "A little descripttion will be showed below. Hover the projects."
     },
     {
         id: 1,
@@ -42,6 +42,7 @@ function hideProjectDescription()  {
 }
 
 // dark mode 
+
 function handleChecked(isChecked) {
     if (isChecked) {
         document.body.setAttribute('dark', '');
@@ -50,5 +51,81 @@ function handleChecked(isChecked) {
     }
 }
 
+// scroll animations 
+
+const animationItems = document.querySelectorAll('._anim-item');
+
+if (animationItems.length > 0) {
+    window.addEventListener('scroll', animationOnScroll);
+    function animationOnScroll() {
+        for (let i = 0; i < animationItems.length; i++) {
+            const animItem = animationItems[i];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if (window.pageYOffset > (animItemOffset - animItemPoint) && window.pageYOffset < (animItemOffset + animItemHeight)) {
+                animItem.classList.add('_active');
+                if (animItem.classList.contains('skill')) showProgress();
+                if (animItem.classList.contains('frame')) changeNav(animItem);
+            } else {
+                animItem.classList.remove('_active');
+            }
+        } 
+    }
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+              scrollLeft = window.pageXoffset || document.documentElement.scrollLeft,
+              scrollTop = window.pageYoffset || document.documentElement.scrollTop;
+
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
+}
+
+setTimeout(() => {
+    animationOnScroll();
+}, 300);
+
+// skills animaition 
+
+function showProgress() {
+    const skills = document.querySelectorAll('.skill');
+    const skillsResults = {
+        html: 80,
+        js: 75,
+        git: 35,
+        figma: 40,
+        react: 20,
+        bootstrap: 25,
+        scss: 20
+    }
+    
+    skills.forEach(skill => {
+            const range = skill.lastElementChild;
+            for (let i=0; i < skillsResults[skill.id]; i++) {
+                range.firstElementChild.style.width = `${i}%`;
+            }
+    });
+}
+
+function changeNav(desktopItem) {
+    const navItems = document.querySelectorAll('.list-item');
+    navItems.forEach(item => {
+            item.classList.remove('active-page');
+    });
+
+    navItems.forEach(item => {
+        if (item.firstElementChild.textContent == `${desktopItem.id}`) {
+            item.classList.add('active-page');
+        }
+    });
+
+    
+}
 
 
