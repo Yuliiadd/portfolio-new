@@ -775,35 +775,6 @@ li.active-page {
     animation-delay: .5s;
 }
 
-  
-
-/* 
-.in-progress {position: relative;}
-.in-progress::before {
-    content: "IN PROGRESS";
-    position: absolute;
-    top: -20%;
-    right: 0;
-}
-
-.full {
-    width: 100%;
-    height: 12px;
-    border: var(--border);
-    background-color: transparent;
-    padding: 2px;
-}
-
-._active .result {
-    background-color: var(--primary);
-    height: 100%;
-    transition: .8s ;
-} */
-
-/* .skill._active .result {
-    opacity: 1;
-
-} */
 
 .secondary {
     color: var(--secondary);
@@ -1253,7 +1224,8 @@ and (max-width: 1199px) {
        padding: 0 50px;
     }
 
-    .link {
+    .link,
+    .desk-7 .link {
         min-width: 170px;
     }
 
@@ -1292,6 +1264,81 @@ and (max-width: 1199px) {
         opacity: 0.4;
     }
 
+    .desk-2 .title,
+    .desk-3 .title, 
+    .desk-4 .title, 
+    .desk-5 .title, 
+    .desk-6 .title, 
+    .desk-7 .title  {
+        font-size: 55px;
+    }
+
+    .skills {
+        margin-top: 50px;
+    }
+
+    .desk-4 .description {
+        width: 100%;
+        right: auto;
+        left: 0;
+        border: 0;
+        top: 120px;
+        padding: 0 30px;
+    }
+
+    .desk-6 {
+        position: relative;
+    }
+    .desk-6 .title {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 10%;
+        left: 0;
+        position: absolute;
+    }
+
+    .side {
+        width: auto;
+    }
+    .subtitle-2 {
+        position: relative;
+    }
+    .subtitle-2::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: var(--primary);
+        position: absolute;
+        left: -40px;
+        top: 12px;
+    }
+
+    .contacts-info {
+        font-size: var(--font-s);
+    }
+
+    .contacts {
+        width: 100%;
+    }
+
+    .desk-7 {
+        padding: 0 50px;
+    }
+
+    .desk-7 .title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 10%;
+        left: 0;
+        position: absolute;
+        padding: 0;
+
+    }
+
 }
 
 /* mobile */
@@ -1301,4 +1348,241 @@ and (max-width: 1199px) {
 and (min-width: 320px)
 and (max-width: 767px) {
 
+    :root {
+        --font-s: 12px;
+        --font-l: 24px;
+        --font-m: 18px;
+    }
+
+    .header {
+        padding:  0 20px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .frame {
+        border-top: var(--border);
+    }
+
+    .current-company {
+        position: absolute;
+        width: 20%;
+        opacity: 0;
+        display: none;
+    }
+
+    .desk-5 .description {
+        margin: 0;
+        max-width: 100%;
+    }
+    .description-text li {
+        white-space: normal;
+       list-style: circle ;
+    }
+    .first-screen .title {
+        font-size: 40px;
+    }
+
+    .first-name {
+        font-size: 40px;
+        top: -640%;
+    }
+
+    .animation-wrapper {
+        height: 50px;
+        top: -10px;
+    }
+
+    @keyframes swiping {
+        0% {opacity: 0;}
+        50% {opacity: 1;
+            top: -13%;}
+        55% {top: -143%;}
+        60% {top: -143%;}
+        65% {top: -270%;}
+        70% {top: -270%;}
+        75% {top: -395%;}
+        80% {top: -395%;}
+        85% {top: -523%;}
+        90% {top: -523%;}
+        95% {top: -640%;}
+        100% {top: -640%;}
+    }
+
+    .first-screen {
+       padding: 0 20px;
+    }
+
+    .link,
+    .desk-7 .link {
+        min-width: auto;
+        font-size: var(--font-m);
+    }
+
+    .copy {
+        padding: 10px;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation {
+        top: 170px;
+        right: -10px;
+        width: auto;
+        height: auto;
+        left: auto;
+    }
+
+    .navigation:hover.navigation li {
+        right: 7px;
+        opacity: 1;
+    } 
+
+    .navigation:hover.navigation ul {
+        align-items: center;
+    } 
+
+    .navigation li {
+       background-image: var(--background-image);
+       opacity: 1;
+       position: relative;
+       right: -80px;
+       opacity: 0.4;
+    }
+
+    li.active-page {
+        right: -80px;
+        opacity: 0.4;
+    }
+
+    .desk-2 .title,
+    .desk-3 .title, 
+    .desk-4 .title, 
+    .desk-5 .title, 
+    .desk-6 .title, 
+    .desk-7 .title  {
+        font-size: 35px;
+    }
+
+    .skills {
+        margin-top: 85px;
+    }
+
+    .desk-4 .description {
+        width: 100%;
+        right: auto;
+        left: 0;
+        border: 0;
+        top: 120px;
+        padding: 0 30px;
+    }
+
+    .desk-4 .title {
+        padding: 0; 
+        justify-content: center;
+    }
+
+    .desk-5 {
+        padding: 0 50px;
+    }
+
+    .desk-6 {
+        position: relative;
+    }
+    .desk-6 .title {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 10%;
+        left: 0;
+        position: absolute;
+    }
+
+    .side {
+        width: auto;
+    }
+    .subtitle-2 {
+        position: relative;
+    }
+    .subtitle-2::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: var(--primary);
+        position: absolute;
+        left: -40px;
+        top: 9px;
+    }
+
+    .contacts-info {
+        font-size: var(--font-s);
+    }
+
+    .contacts {
+        width: 100%;
+    }
+
+    .desk-7 {
+        padding: 0 20px;
+        /* overflow: inherit; */
+    }
+
+    .desk-7 .title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 10%;
+        left: 0;
+        position: absolute;
+        padding: 0;
+
+    }
+
+    .social-media {
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .desk-7 .social-media {
+        gap: 30px;
+        flex-direction: column;
+        padding-top: 40px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        
+    }
+
+    .skills div[skill-weight="1"] {
+        font-size: 20px;
+    }
+    
+    .skills div[skill-weight="2"] {
+        font-size: 25px;
+    }
+    
+    .skills div[skill-weight="3"] {
+        font-size: 35px;
+    }
+    
+    .skills div[skill-weight="4"] {
+        font-size: 45px;
+    }
+    
+    .skills div[skill-weight="5"] {
+        font-size: 55px;
+    }
+
+    .description {
+        margin: 0 10%;;
+    }
 }
