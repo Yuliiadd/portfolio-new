@@ -1339,6 +1339,31 @@ and (max-width: 1199px) {
 
     }
 
+    .animation-wrapper {
+        height: 85px;
+    }
+
+    .first-name {
+        top: -578px;
+    }
+
+    @keyframes swiping {
+        0% {opacity: 0;}
+        50% {opacity: 1;
+            top: -16px;}
+        55% {top: -128px;}
+        60% {top: -128px;}
+        65% {top: -242px;}
+        70% {top: -242px;}
+        75% {top: -355px;}
+        80% {top: -355px;}
+        85% {top: -467px;}
+        90% {top: -467px;}
+        95% {top: -578px;}
+        100% {top: -578px;}
+    }
+    
+
 }
 
 /* mobile */
