@@ -135,6 +135,7 @@ button {
     width: 100%;
     z-index: 5;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .header-left,
@@ -323,6 +324,7 @@ input:checked + .slider:before {
     right:150px;
     top: 120px;
     filter: blur(120px);
+    -webkit-filter: blur(120px);
     animation: pulse 4s alternate infinite;
 }
 .first-screen::before {
@@ -336,6 +338,7 @@ input:checked + .slider:before {
     right:200px;
     top: 270px;
     filter: blur(120px);
+    -webkit-filter: blur(120px);
     animation: pulse 5s alternate infinite;
 }
 
@@ -504,10 +507,11 @@ input:checked + .slider:before {
     position: relative;
     transition: .2s;
     min-width: 200px;
+    height: 40px;
     color: var(--secondary);
 }
 
-.link::after {
+/* .link::after {
     content: "";
     width: 20px;
     height: 20px;
@@ -538,17 +542,17 @@ input:checked + .slider:before {
 
 .social-media .link:nth-child(3)::after {
     background-image:url(img/telegram.svg);
-}
+} */
 
 .link:hover {
     transform: rotate(-3deg);
 }
 
-.link:hover.link::after {
+/* .link:hover.link::after {
     opacity: 1;
     bottom: 57px;
     left: -30px;
-}
+} */
 
 
 .desktop {
@@ -839,12 +843,14 @@ li.active-page {
 
 .project:hover .project-hover {
     backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
     background-color: transparent;
 
 }
 
 .project:hover .button-project {
     backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
     width: 100px;
     height: 60px;
 }
@@ -869,6 +875,7 @@ li.active-page {
     z-index: 2;
     background-color: var(--bg-color-opacity);
     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     transition: .3s;
 }
 
@@ -883,6 +890,7 @@ li.active-page {
     font-size: 10px;
     transition: .5s;
     backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     border: var(--border);
     position: absolute;
     font-weight: 300;
@@ -1030,6 +1038,7 @@ li.active-page {
     right:100px;
     bottom: 100px;
     filter: blur(100px);
+    -webkit-filter: blur(100px);
     animation: pulse 3s alternate infinite;
 }
 .desk-7::after{
@@ -1043,6 +1052,7 @@ li.active-page {
     right:150px;
     bottom: 150px;
     filter: blur(120px);
+    -webkit-filter: blur(120px);
     animation: pulse 4s alternate infinite;
 }
 
@@ -1098,6 +1108,7 @@ li.active-page {
     transition: .2s;
     margin: 20px 0;
     backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     border: var(--border);
     font-family: 'Chakra Petch', sans-serif;
     color: var(--secondary);
@@ -1117,6 +1128,7 @@ li.active-page {
     transition: .2s;
     margin: 20px 0;
     backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     border: var(--border);
     font-family: 'Chakra Petch', sans-serif;
     margin-left: 10px;
@@ -1610,4 +1622,28 @@ and (max-width: 767px) {
     .description {
         margin: 0 10%;;
     }
+
+    .switch {
+        width: 30px;
+        height: 18px;
+    }
+
+    .slider:before {
+        height: 13px;
+        width: 13px;
+        left: 3px;
+        bottom: 3px;;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(11px);
+        -ms-transform: translateX(11px);
+        transform: translateX(11px);
+    }
+
+    .theme-name::before, .theme-name::after {
+        font-size: 7px;
+        bottom: 4px;
+    }
+
 }
