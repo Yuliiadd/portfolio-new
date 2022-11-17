@@ -876,10 +876,6 @@ li.active-page {
 
 /* desk 6 */
 
-.desk-6 {
-
-}
-
 .side {
     width: 50%;
 }
@@ -993,7 +989,8 @@ li.active-page {
     border: var(--border);
     font-family: 'Chakra Petch', sans-serif;
     color: var(--secondary);
-    
+    position: relative;
+    transition: 0.2s;
 }
 
 .button:hover {
@@ -1001,6 +998,10 @@ li.active-page {
     padding: 15px 50px;
     background-color: var(--secondary);
     color: var(--bg-color);
+}
+
+.button:active {
+    top: 3px;
 }
 
 .copy {
@@ -1014,6 +1015,8 @@ li.active-page {
     font-family: 'Chakra Petch', sans-serif;
     margin-left: 10px;
     position: relative;
+    background-color: transparent;
+    transition: .2s;
 }
 [dark] .copy {
     background-color: #fff;
@@ -1029,6 +1032,10 @@ li.active-page {
     font-weight: 300;
     transition: .2s;
 
+}
+
+.copy:active {
+    top: 3px;
 }
 
 .copy:hover {

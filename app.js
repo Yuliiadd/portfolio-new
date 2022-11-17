@@ -1,3 +1,9 @@
+
+
+const email = "yuliiadd@gmail.com";
+const copyBtn = document.querySelector('.copy');
+copyBtn.addEventListener('click', copyEmail);
+
 // data base 
 
 const dataBase = [
@@ -126,6 +132,21 @@ function changeNav(desktopItem) {
     });
 
     
+}
+
+// copy button 
+
+function copyEmail() {
+    const copyContent = async () => {
+        try {
+          await navigator.clipboard.writeText(email);
+          console.log('Email copied to clipboard');
+        } catch (err) {
+          console.error('Failed to copy: ', err);
+        }
+      }
+
+      copyContent();
 }
 
 
